@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Mail, Terminal, MapPin } from 'lucide-react';
+import { ArrowRight, Mail, Terminal, MapPin, FileDown } from 'lucide-react';
 import { GithubIcon } from '../ui/Icons';
 import { profileData } from '../../data/profile';
 import { Button } from '../ui/Button';
@@ -108,6 +108,18 @@ export const HeroSection: React.FC = () => {
                 >
                   GitHub
                 </Button>
+
+                {profileData.resumeAvailable && (
+                  <Button
+                    href={profileData.resumeUrl}
+                    download="Abhi_Trivedi_Resume.pdf"
+                    variant="outline"
+                    size="lg"
+                    leftIcon={<FileDown className="w-4 h-4 text-indigo-500" />}
+                  >
+                    Resume
+                  </Button>
+                )}
               </div>
             </ScrollReveal>
           </div>

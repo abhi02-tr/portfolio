@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, Mail } from 'lucide-react';
-import { GithubIcon } from '../ui/Icons';
+import { GithubIcon, LinkedinIcon } from '../ui/Icons';
 import { navItems, type NavItem } from '../../data/navigation';
 import { profileData } from '../../data/profile';
 import { ThemeToggle } from '../ui/ThemeToggle';
@@ -119,7 +119,7 @@ export const SiteHeader: React.FC = () => {
             </nav>
 
             {/* Right Actions */}
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-2">
               <a
                 href={profileData.githubUrl}
                 target="_blank"
@@ -130,6 +130,19 @@ export const SiteHeader: React.FC = () => {
               >
                 <GithubIcon className="w-4 h-4" />
               </a>
+
+              {profileData.linkedinUrl && (
+                <a
+                  href={profileData.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden sm:flex items-center gap-1.5 p-2 rounded-xl text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-zinc-100 dark:hover:bg-zinc-800/60 border border-transparent hover:border-zinc-200 dark:hover:border-zinc-800 transition-colors"
+                  aria-label="LinkedIn Profile"
+                  title="View LinkedIn Profile"
+                >
+                  <LinkedinIcon className="w-4 h-4" />
+                </a>
+              )}
 
               <ThemeToggle />
 

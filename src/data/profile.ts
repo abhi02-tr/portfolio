@@ -14,7 +14,7 @@ export const profileData: ProfileInfo = {
   email: 'trivediabhi1812@gmail.com',
   githubUrl: 'https://github.com/abhi02-tr',
   githubUsername: 'abhi02-tr',
-  linkedinUrl: 'https://linkedin.com/in/abhi-trivedi',
-  resumeAvailable: false,
-  resumeUrl: undefined,
+  linkedinUrl: 'https://www.linkedin.com/in/abhi-trivedi-232066217',
+  resumeAvailable: true,
+  resumeUrl: '/resume.pdf',
 };
